@@ -19,11 +19,9 @@ def bookCreate(request):
                 return redirect('book-list')
             except:
                 pass
-        else:
-            form = BookForm()
-        return render(request, 'book-create.html', {'form': form})
     else:
-        return render(request, 'book-create.html')
+        form = BookForm()
+    return render(request, 'book-create.html', {'form': form})
 
 def bookUpdate(request, id):
     book = Book.objects.get(id=id)
