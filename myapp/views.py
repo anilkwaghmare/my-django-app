@@ -22,7 +22,9 @@ def bookCreate(request):
         else:
             form = BookForm()
         return render(request, 'book-create.html', {'form': form})
-        
+    else:
+        return render(request, 'book-create.html')
+
 def bookUpdate(request, id):
     book = Book.objects.get(id=id)
     form = BookForm(initial={

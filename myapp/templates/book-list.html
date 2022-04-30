@@ -21,8 +21,8 @@
                     <td>{{ book.author }}</td>
                     <td>{{ book.year }}</td>
                     <td>
-                        <a href="/book-update/{{ book.id }}" type="button" class="btn btn-warning"></a>
-                        <a href="/book-delete/{{ book.id }}" type="button" class="btn btn-danger"></a>
+                        <a href="/book-update/{{ book.id }}" type="button" class="btn btn-warning">Edit</a>
+                        <a href="/book-delete/{{ book.id }}" type="button" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             {% endfor %}
